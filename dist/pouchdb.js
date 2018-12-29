@@ -8628,6 +8628,7 @@ function HttpPouch(opts, callback) {
 
     options = options || {};
     options.headers = options.headers || new h();
+    options.credentials = 'include';
 
     if (opts.auth || host.auth) {
       var nAuth = opts.auth || host.auth;
@@ -8667,6 +8668,7 @@ function HttpPouch(opts, callback) {
 
     options = options || {};
     options.headers = options.headers || new h();
+    options.credentials = 'include';
 
     if (!options.headers.get('Content-Type')) {
       options.headers.set('Content-Type', 'application/json');
